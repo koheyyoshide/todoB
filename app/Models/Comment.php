@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Comment extends Model
 {
     use HasFactory;
+
+    public function tasks()
+    {
+        return $this->belongsTo('App\Models\Task');
+    }
+
+    public function users()
+    {
+        return $this->belongsTo('App\Models\User');
+    }
+    
 }
