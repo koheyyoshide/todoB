@@ -9,12 +9,11 @@ class Bookmark extends Model
 {
     use HasFactory;
 
-    public function users()
+    public function user()
     {
-        return $this->belongsTo('App\Models\Use');
+        return $this->belongsTo('App\Models\User');
     }
-
-    public function tasks()
+    public function task()
     {
         return $this->belongsTo('App\Models\Task');
     }
