@@ -52,7 +52,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <a href="#" class="btn btn-primary">Go Top</a>
+                  <a href="#" class="btn btn-primary">詳細画面へ</a>
                 </div>
               </div>
             </div>
@@ -62,7 +62,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <p class="card-text">This is a short card.</p>
-                  <a href="#" class="btn btn-primary">Go Top</a>
+                  <a href="#" class="btn btn-primary">詳細画面へ</a>
                 </div>
               </div>
             </div>
@@ -72,7 +72,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Go Top</a>
+                  <a href="#" class="btn btn-primary">詳細画面へ</a>
                 </div>
               </div>
             </div>
@@ -82,7 +82,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <a href="#" class="btn btn-primary">Go Top</a>
+                  <a href="#" class="btn btn-primary">詳細画面へ</a>
                 </div>
               </div>
             </div>
