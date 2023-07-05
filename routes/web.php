@@ -23,9 +23,9 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/top', [App\Http\Controllers\TaskController::class, 'showTopPage'])->name('top');
+Route::get('/tasks.top', [App\Http\Controllers\TaskController::class, 'showTopPage'])->name('tasks.top');
 
-Route::get('/create','TaskController@create')->name('create');
+Route::get('/tasks.create','TaskController@create')->name('tasks.create');
 
 // Route::get('/tasks/create', 'TaskController@create')->name('tasks.create');
-Route::post('/create', 'TaskController@store')->name('store');
+Route::post('/tasks.create', 'TaskController@store')->name('tasks.store');

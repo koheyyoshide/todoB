@@ -12,12 +12,13 @@ class TaskController extends Controller
     //
     public function showTopPage()
     {
-        return view('top');
+        $tasks=Task::all();
+        return view('tasks.top', ['tasks'=>$tasks]);
     }
 
     public function  create()
     {
-        return view('create');
+        return view('tasks.create');
     }
 
     function store(Request $request)
@@ -25,12 +26,12 @@ class TaskController extends Controller
         
         // dd($request);
         $task=new Task;
-        $task->title=$request->title;
-        $task->contents=$request->contents;
+        $task->title=$request->input('title');
+        $task->contents=$request->input('contents');
         $task->image= $request->image;
         $task->user_id=Auth::id();
         $task->save();
-        return redirect()->route('top');
+        return redirect()->route('tasks.top');
        
     }
 } 

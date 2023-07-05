@@ -44,50 +44,34 @@
           </form>
         </div>
       </nav>
-      <div class="container">
-        <div class="row row-cols-1 row-cols-md-3">
+      <div>
+        @foreach ($tasks as $task)
+        <div class="container">
+          <div class="row row-cols-1 row-cols-md-3">
             <div class="col mb-4">
               <div class="card h-100">
-                <img src="https://images.unsplash.com/photo-1543007630-9710e4a00a20?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8JUUzJTgzJTkwJUUzJTgzJUJDfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60" class="card-img-top" alt="...">
+                <img src="{{ $task->image }}" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <a href="#" class="btn btn-primary">詳細画面へ</a>
-                </div>
-              </div>
-            </div>
-            <div class="col mb-4">
-              <div class="card h-100">
-                <img src="https://plus.unsplash.com/premium_photo-1679090008554-788aa76a2e24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8JUUzJTgzJUFDJUUzJTgyJUI5JUUzJTgzJTg4JUUzJTgzJUE5JUUzJTgzJUIzfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a short card.</p>
-                  <a href="#" class="btn btn-primary">詳細画面へ</a>
-                </div>
-              </div>
-            </div>
-            <div class="col mb-4">
-              <div class="card h-100">
-                <img src="https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8JUUzJTgzJUFDJUUzJTgyJUI5JUUzJTgzJTg4JUUzJTgzJUE5JUUzJTgzJUIzfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">詳細画面へ</a>
-                </div>
-              </div>
-            </div>
-            <div class="col mb-4">
-              <div class="card h-100">
-                <img src="https://images.unsplash.com/photo-1583900985737-6d0495555783?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8JUUzJTgzJTkzJUUzJTgyJUFEJUUzJTgzJThCfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <a href="#" class="btn btn-primary">詳細画面へ</a>
+                  <h5 class="card-title">{{ $task->title }}</h5>
+                  <p class="card-text">{{ $task->contents }}</p>
+                  <p class="created_time">投稿日時：{{ $task->created_at }}</p>
+                  <a href="#" class="btn btn-primary">編集</a>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+    @endforeach
+
+
       </div>
+    
+
+
+
+
+
+
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
