@@ -9,7 +9,7 @@
 <body>
   <div class="container">
     <h1>新規投稿</h1>
-    <form action="{{ route('store') }}" method="POST">
+    <form action="{{ route('tasks.store') }}" method="POST">
         @csrf
       <div class="form-group">
         <label for="title">タイトル</label>
