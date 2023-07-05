@@ -44,28 +44,25 @@
           </form>
         </div>
       </nav>
-      <div>
-        @foreach ($tasks as $task)
-        <div class="container">
-          <div class="row row-cols-1 row-cols-md-3">
-            <div class="col mb-4">
+      
+      <div class="container">
+        <div class="row">
+          @foreach ($tasks as $task)
+            <div class="col-md-4 mb-4">
               <div class="card h-100">
-                <img src="{{ $task->image }}" class="card-img-top" alt="...">
+                <img src="{{ $task->image_at }}" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">{{ $task->title }}</h5>
                   <p class="card-text">{{ $task->contents }}</p>
                   <p class="created_time">投稿日時：{{ $task->created_at }}</p>
-                  <a href="#" class="btn btn-primary">編集</a>
+                  <a href="{{ route('tasks.edit', $task->id) }}" class="btn btn-primary">編集</a>
                 </div>
               </div>
             </div>
-          </div>
+          @endforeach
         </div>
-    @endforeach
-
-
       </div>
-    
+      
 
 
 
