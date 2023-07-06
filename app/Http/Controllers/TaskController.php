@@ -36,7 +36,7 @@ class TaskController extends Controller
         $task=new Task;
         $task->title=$request->input('title');
         $task->contents=$request->input('contents');
-        $task->image= $request->file('image')->store('public/images/'); 
+        $task->image= $request->image->store('public/images'); 
         $task->user_id=Auth::id();
         $task->save();
        

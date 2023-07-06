@@ -52,9 +52,8 @@
           @foreach ($tasks as $task)
             <div class="col-md-4 mb-4">
               <div class="card h-100">
-
-                <img src="{{ asset('storage/images/' . $task->image ) }}" class="card-img-top" alt="...">
-
+                {{-- <img src="{{ asset('storage/'.$task->image ) }}" class="card-img-top" alt="..."> --}}
+                <img src="{{ Storage::url($task->image ) }}" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">{{ $task->title }}</h5>
                   <p class="card-text">{{ $task->contents }}</p>
