@@ -38,22 +38,6 @@
                                 @enderror
                             </div>
                         </div>
-
-                        <div class="row mb-3">
-                            <label for="image" class="col-md-4 col-form-label text-md-end">{{ __('画像') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="image" type="file" class="@error('image') is-invalid @enderror" name="image">
-
-                                @error('image')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-               
-
-
                         <div class="row mb-3">
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
 
