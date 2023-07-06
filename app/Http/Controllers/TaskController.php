@@ -10,12 +10,19 @@ use Illuminate\Support\Facades\Storage;
 
 class TaskController extends Controller
 {
-    //
+    
     public function showTopPage()
     {
-        $tasks=Task::all();
+        $tasks=Task::latest()->simplePaginate(6);
         return view('tasks.top', ['tasks'=>$tasks]);
     }
+
+//     public function top()
+// {
+//     $tasks = Task::all(); // もしくは適切なタスクデータを取得するクエリ
+//     return view('tasks.top', compact('tasks'));
+// }
+
 
     public function  create()
     {
@@ -48,6 +55,23 @@ class TaskController extends Controller
     return view('tasks.edit', compact('task'));
 }
 
+    // function show($id)
+    // {
+    //     $task = Task::find($id);
+
+    //     return view('tasks.show',['task'=>$task]);
+    // }
+    function update(Request $request, $id)
+    {
+        $task = Task::find($id);
+        $task -> title = $request -> title;
+        $task -> contents = $request -> contents;
+        $task -> image = $request -> image;
+        $task -> save();
+
+        // return view('tasks.top',compact('task'));
+        return redirect()->route('tasks.top', compact('task'));
+    }
 } 
 
 
