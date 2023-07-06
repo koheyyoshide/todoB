@@ -38,7 +38,6 @@ class TaskController extends Controller
         $task->contents=$request->input('contents');
         $task->image= $request->file('image')->store('public/images/'); 
         $task->user_id=Auth::id();
-        // dd($task);
         $task->save();
        
         return redirect()->route('tasks.top');
