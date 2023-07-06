@@ -72,6 +72,14 @@ class TaskController extends Controller
         // return view('tasks.top',compact('task'));
         return redirect()->route('tasks.top', compact('task'));
     }
+
+    function destroy($id)
+    {
+        $task=Task::find($id);
+        $task->delete();
+        return redirect()->route('tasks.top');
+    }
+
 } 
 
 
