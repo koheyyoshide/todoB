@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Task;
 // use App\Http\Controllers\Auth;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class TaskController extends Controller
 {
@@ -28,9 +29,11 @@ class TaskController extends Controller
         $task=new Task;
         $task->title=$request->input('title');
         $task->contents=$request->input('contents');
-        $task->image= $request->image;
+        $task->image= $request->file('image')->store('public/images/'); 
         $task->user_id=Auth::id();
+        // dd($task);
         $task->save();
+       
         return redirect()->route('tasks.top');
        
     }
