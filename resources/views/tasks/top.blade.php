@@ -60,6 +60,12 @@
                   <p class="card-text">{{ $task->contents }}</p>
                   <p class="created_time">投稿日時：{{ $task->created_at }}</p>
                   <a href="{{ route('tasks.edit', $task->id) }}" class="btn btn-primary">編集</a>
+
+                  <form action='{{ route('tasks.destroy',$task->id) }}'method='post'>
+                    @csrf
+                    @method('delete')
+                    <input type='submit' value='削除'class="btn btn-danger"onclick='return confirm("本当に削除しますか？");'>
+                  </form>
                 </div>
               </div>
             </div>
