@@ -13,16 +13,19 @@
         @csrf
       <div class="form-group">
         <label for="title">タイトル</label>
-        <input type="text" class="form-control" id="title" placeholder="タイトルを入力してください" name="title">
+        <input type="text" class="form-control" id="title" placeholder="タイトルを入力してください" name="title" required>
       </div>
       <div class="form-group">
         <label for="content">内容</label>
-        <textarea class="form-control" id="content" rows="5" placeholder="内容を入力してください" name="contents"></textarea>
+        <textarea class="form-control" id="content" rows="5" placeholder="内容を入力してください" name="contents" required></textarea>
       </div>
       
       <div class="form-group">
         <label for="image">画像</label>
+        
         <input type="file" class="form-control-file" id="image" name="image" required>
+
+        
       </div>
 
       <button type="submit" class="btn btn-primary">投稿</button>
