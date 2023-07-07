@@ -38,6 +38,7 @@
                                 @enderror
                             </div>
                         </div>
+
                         <div class="row mb-3">
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
 
@@ -62,13 +63,12 @@
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                {{-- <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
-                                </button> --}}
-                                <a href="{{ route('tasks.top') }}" class="btn btn-primary">
+                                </button>
+                                {{-- <a href="{{ route('tasks.top') }}" class="btn btn-primary">
                                     {{ __('Resister') }}
-                                </a>
-                                
+                                </a> --}}
                             </div>
                         </div>
                     </form>
