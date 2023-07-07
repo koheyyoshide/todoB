@@ -22,7 +22,7 @@
       
       <div class="form-group">
         <label for="image">画像</label>
-        <input type="file" class="form-control-file" id="image" name="image">
+        <input type="file" class="form-control-file" id="image" name="image" required>
       </div>
 
       <button type="submit" class="btn btn-primary">投稿</button>
